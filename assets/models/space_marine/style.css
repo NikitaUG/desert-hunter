@@ -1,0 +1,81 @@
+.space-marine.unit {
+  position: absolute;
+  z-index: 1001;
+
+  transition-property: left, top;
+  transition-timing-function: linear;
+  transition-duration: var(--animation-cycle);
+
+  overflow: hidden;
+}
+
+.space-marine .model {
+  width: 100%;
+  height: 100%;
+
+  background-repeat: no-repeat;
+
+  position: absolute;
+
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -5%);
+  background-size: 100% 100%;
+  background-position: center;
+}
+
+.space-marine.wait .model {
+  background-image: url("./wait.gif");
+}
+
+.space-marine.run .model {
+  background-image: url("./run.gif");
+  /* background-size: 70% 90%; */
+}
+
+.space-marine.move .model {
+  background-image: url("./move.gif");
+  /* background-size: 120% 95%; */
+}
+
+.space-marine.attack .model {
+  background-image: url("./attack.gif");
+  /* background-size: 120%; */
+  /* background-position: 30% 130%; */ 
+}
+
+[data-direction="none"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(0deg);
+}
+
+[data-direction="right"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(0deg);
+}
+
+[data-direction="right-top"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(30deg);
+}
+
+[data-direction="top"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(60deg);
+}
+
+[data-direction="left-top"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(150deg);
+}
+
+[data-direction="left"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(180deg);
+}
+
+[data-direction="right-bottom"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(210deg);
+}
+
+[data-direction="bottom"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(-120deg);
+}
+
+[data-direction="left-bottom"].space-marine {
+  transform: rotateX(45deg) translateY(-80%) rotateY(-30deg);
+}

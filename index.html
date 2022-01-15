@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Game</title>
+    <!-- units -->
+    <script src="assets/models/index.js" ></script>
+
+    <script src="assets/models/space_marine/index.js"></script>
+    <link rel="stylesheet" href="assets/models/space_marine/style.css">
+
+    <script src="assets/models/ork/index.js"></script>
+    <link rel="stylesheet" href="assets/models/ork/style.css">
+    
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/scene.css">
+    <link rel="stylesheet" href="css/ui.css">
+    <!-- JS -->
+    <script>
+        const SIZE = 50;
+        const CAMERA_STEP = 10;
+
+        const GAME_CYCLE = 100;
+        const ANIMATION_SPEED =  1000;
+        document.write(`<style> :root { --animation-cycle: ${ANIMATION_SPEED}ms; }</style>`);
+    </script>
+    <script src="js/helpers.js" defer></script>
+    <script src="js/camera.js" defer></script>
+    <script src="js/scene.js" defer></script>
+
+    <script src="js/enemy.js" defer> </script>
+    <script src="js/user.js" defer></script>
+
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <section class="main-box">
+        <section class="panel left-panel"></section>
+        <section class="panel top-panel"></section>
+        <section class="panel right-panel"></section>
+        <section class="panel bottom-panel"></section>
+
+        <section class="scene">
+            <section class="earth">
+                
+            </section>
+            <style id="SCENE_CAMERA"></style>
+        </section>
+    </section>
+</body>
+</html>

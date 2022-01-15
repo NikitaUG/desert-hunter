@@ -1,0 +1,214 @@
+:root{
+  --background-color: rgba(0,0,0,.6);
+}
+
+
+.scene {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  bottom: 100px;
+
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: inset 10px 10px 50px rgba(59, 59, 59, 0.5);
+}
+
+.earth {
+  /* background-image: url("./img/ground.jpg"); */
+  
+  transform-origin: top left;
+
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  transition: transform var(--animation-cycle) linear;
+}
+
+.block {
+  background-color: white;
+}
+
+
+[data-lvl="0"].block {
+  background-image: url("./img/hole.jpg"), url("./img/fog.png");
+  /* background-size: cover; */
+  background-blend-mode: multiply;
+  /* background: red; */
+}
+
+[data-lvl="1"].block {
+  background-image: url("./img/ground.jpg"), url("./img/fog.png");
+  /* background-size: cover; */
+  background-blend-mode: multiply;
+  /* background: yellowgreen; */
+}
+
+[data-lvl="2"].block {
+  background-image: url("./img/ground.jpg"), url("./img/fog.png");
+  background-blend-mode: multiply;
+  /* transform: translateX(-3px) translateY(20px); */
+  /* background: rebeccapurple; */
+  background-color: transparent!important;
+}
+
+[data-lvl="3"].block {
+  background-image: url("./img/ground.jpg"), url("./img/fog.png");
+  background-blend-mode: multiply;
+  /* background: black; */
+  /* transform: translateX(-3px) translateY(-7px); */
+  
+}
+
+/*small box styles*/
+
+.small_side,
+.small_box {
+  perspective: 1000px;
+  perspective-origin: center -14em;
+  width: 50px;
+  height: 24px;
+  }
+
+.small_box {
+  transform-style: preserve-3d;
+  transform: rotateY(8deg);
+  }
+
+
+
+.small_side {
+  position: absolute;
+  width: 50px;
+  height: 24px;
+  border: 1px solid rgb(70, 50, 25);
+  opacity: 1;
+  background-repeat:no-repeat;
+  background-size: cover;
+  }
+  .small_side.fog::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+  }
+.small_back {
+  transform: translateZ(-25px);
+
+  background-image: url("./yachik_front_24.jpg");
+
+  }
+
+.small_left {
+  transform: translateX(-25px) rotateY(90deg);
+  background-image: url("./yachik_front_24.jpg");
+
+  }
+
+.small_right {
+  transform: translateX(25px) rotateY(90deg);
+  background-image: url("./yachik_front_24.jpg");
+  
+  }
+
+  .small_top {
+    transform: translateY(-12px) rotateX(90deg);
+    background-image: url("./yachik_top_24.jpg");
+
+  }
+
+  .small_bottom {
+    transform: translateY(12px) rotateX(90deg);
+    background-image: url("./yachik4.jpg");
+  }
+  .small_front {
+    transform: translateZ(25px);
+    background-image: url("./yachik_front_24.jpg");
+
+  }
+
+
+
+
+
+
+/*big box styles*/
+/* transform: translateX(-3px) translateY(-7px); */
+
+.side,
+.big_box {
+  perspective: 1000px;
+  perspective-origin: center -14em;
+  width: 50px;
+  height: 50px;
+  }
+
+.big_box {
+  transform-style: preserve-3d;
+  transform: rotateX(-36deg) rotateY(8deg) rotateZ(9deg);
+  }
+
+.side {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(70, 50, 25);
+  opacity: 1;
+  background-repeat:no-repeat;
+  background-size: cover;
+  }
+
+  .side.fog::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background-color);
+  }
+.back {
+  transform: translateZ(-25px);
+
+  background-image: url("./yachik2.jpg");
+
+  }
+
+.left {
+  transform: translateX(-25px) rotateY(90deg);
+  background-image: url("./yachik2.jpg");
+
+  }
+
+.right {
+  transform: translateX(25px) rotateY(90deg);
+  background-image: url("./yachik2.jpg");
+  
+  }
+
+  .top {
+    transform: translateY(-25px) rotateX(90deg);
+    background-image: url("./yachik4.jpg");
+
+  }
+
+  .bottom {
+    transform: translateY(25px) rotateX(90deg);
+    background-image: url("./yachik4.jpg");
+  }
+  .front {
+    transform: translateZ(25px);
+    background-image: url("./yachik2.jpg");
+
+  }
+
+
