@@ -35,4 +35,35 @@ window.addEventListener("keydown", (e) => {
 
     mainCamera();
   }
+  if (e.code === "KeyM"){
+    document.querySelectorAll('.ork').forEach((e)=>{
+      e.classList.remove('none-display');
+    })
+    const allMap = document.querySelector('.earth-3d');
+    CAMERA_ALL.innerHTML = `
+    .earth-3d {
+      transform: translate(-67px, -31px) scale(1.1)!important;
+    }`
+    document.querySelector('.scene').style.boxShadow = 'none';
+    document.querySelectorAll('.left-panel, .top-panel, .right-panel, .bottom-panel').forEach((e)=>{
+      e.style.opacity = '0';
+    })
+
+    }
 });
+
+window.addEventListener('keyup', (e)=>{
+  if (e.code === "KeyM"){
+    document.querySelectorAll('.ork').forEach((e)=>{
+      e.classList.add('none-display');
+    })
+    CAMERA_ALL.innerHTML = '';
+    document.querySelector('.scene').style.boxShadow = 'inset 10px 10px 50px rgba(59, 59, 59, 0.5)';
+    document.querySelectorAll('.left-panel, .top-panel, .right-panel, .bottom-panel').forEach((e)=>{
+      e.style.opacity = '1';
+    })
+    }
+})
+
+
+

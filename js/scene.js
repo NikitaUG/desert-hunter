@@ -77,4 +77,7 @@ function generateWorld() {
 }
 
 generateWorld();
-// console.log(SCENE_MODEL);
+
+
+
+
